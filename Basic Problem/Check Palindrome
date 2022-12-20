@@ -1,0 +1,16 @@
+bool checkPalindrome(char str[]) {
+    
+    // Write your code here
+    int low=0;
+    int high= strlen(str)-1;
+    while(low<high){
+        if(str[low]!=str[high]){
+            return false;
+            
+        }
+        low++;
+        high--;
+        
+    }
+    return true;
+}

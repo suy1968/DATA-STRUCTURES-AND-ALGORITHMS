@@ -1,0 +1,34 @@
+#include<cmath>
+#include<string.h>
+
+void reversef(char input[],int startindex,int endindex){
+    int i=startindex;
+    int j=endindex;
+    while(i<j){
+        std::swap(input[i],input[j]);
+        i++;
+        j--;
+    }
+
+
+
+    }
+
+
+void reverseEachWord(char str[]) {
+    // Write your code here
+     int len=strlen(str);
+
+int startindex=0;
+
+
+
+ for(int i=0;i<=len;i++){
+//count1++;
+ if(str[i]==' ' || str[i]=='\0' ){
+    reversef(str,startindex,i-1);
+    startindex=i+1;
+ }
+ }
+
+}

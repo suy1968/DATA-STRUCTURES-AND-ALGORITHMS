@@ -1,0 +1,46 @@
+void spiralPrint(int **input, int nRows, int nCols)
+{
+    //Write your code here
+int i, k = 0, l = 0;
+ 
+    /* k - starting row index
+        m - ending row index
+        l - starting column index
+        n - ending column index
+        i - iterator
+    */
+ 
+    while (k < nRows && l < nCols) {
+        /* Print the first row from
+               the remaining rows */
+        for (i = l; i < nCols; ++i) {
+            cout << input[k][i] << " ";
+        }
+        k++;
+ 
+        /* Print the last column
+         from the remaining columns */
+        for (i = k; i < nRows; ++i) {
+            cout << input[i][nCols - 1] << " ";
+        }
+        nCols--;
+ 
+        /* Print the last row from
+                the remaining rows */
+        if (k < nRows) {
+            for (i = nCols - 1; i >= l; --i) {
+                cout << input[nRows - 1][i] << " ";
+            }
+            nRows--;
+        }
+ 
+        /* Print the first column from
+                   the remaining columns */
+        if (l < nCols) {
+            for (i = nRows - 1; i >= k; --i) {
+                cout << input[i][l] << " ";
+            }
+            l++;
+        }
+    }
+}

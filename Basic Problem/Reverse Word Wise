@@ -1,0 +1,37 @@
+#include<cstring>
+void reverseStringWordWise(char input[]) 
+    {
+    int k=0,i,g;
+       int l;
+        for( i=0,l=strlen(input)-1;i<l;i++,l--)
+        {
+            char temp=input[i];
+            input[i]=input[l];
+            input[l]=temp;
+        }
+     
+    
+        for(int i=0;i<=strlen(input);i++)
+         
+         {   
+        if(input[i]==' ' || input[i]=='\0')
+            
+        {
+        
+             for( int j=k, g=i-1;j<g;j++,g--)
+                
+             {
+             char t=input[j];
+              input[j]=input[g];
+              input[g]=t;
+             }
+            k=i+1;
+
+         }
+        
+        
+          
+         }
+         
+
+    }

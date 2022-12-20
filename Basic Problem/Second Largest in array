@@ -1,0 +1,25 @@
+int findSecondLargest(int *input, int n)
+{
+    int def= -2147483648;
+    int f=input[0];
+    int s=def;
+    
+	for(int i=1;i<n;i++){
+        if(input[i]>f)
+        {
+            s=f;
+            
+            f=input[i];
+        
+        }
+        else if( input[i]<f && input[i]>s ){
+            
+            s=input[i];    
+        
+        }
+    }
+    
+    return s;
+
+
+}

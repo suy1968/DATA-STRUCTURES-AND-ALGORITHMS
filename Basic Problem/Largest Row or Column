@@ -1,0 +1,35 @@
+#include<cstring>
+#include<climits>
+void findLargest(int **input, int nRows, int mCols)
+{
+    int max= INT_MIN;
+        int q =0;
+    string s="row";
+    //Write your code here
+    int sum=0;
+     for(int i=0;i<nRows;i++){
+        sum=0;
+        for(int j=0;j<mCols;j++){
+            sum=sum+input[i][j]; 
+        }
+        if(sum>max){
+            max=sum;
+           q=i;
+        }
+    }
+    for(int i=0;i<mCols;i++){
+        sum=0;
+        for(int j=0;j<nRows;j++){
+            sum=sum+input[j][i]; 
+        }
+        if(sum>max){
+            max=sum;
+           	q=i;
+            s="column";
+        }
+    }
+    cout<<s<<" "<<q<<" "<<max;
+    
+    
+    
+}

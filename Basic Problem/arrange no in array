@@ -1,0 +1,19 @@
+void arrange(int *arr, int n)
+{	
+	
+
+int i = 0;
+int j = n -1;
+for(int k = 1;k <= n;k++)
+{
+      if(k%2 == 0)
+     {
+         arr[j] = k;
+         j--;
+     }
+     else{
+         arr[i] = k;
+         i++;
+     }
+}
+}

@@ -1,0 +1,15 @@
+#include<cstring>
+void removeConsecutiveDuplicates(char input[]) {
+    // Write your code here
+   char prev='\0';
+    int k=0;
+    int n =strlen(input);
+    
+    for(int i=0;i<n;i++){
+        if(prev !=input[i]){
+           input[k++]=input[i];
+        }
+        prev =input[i];
+    }
+    input[k]='\0';
+}

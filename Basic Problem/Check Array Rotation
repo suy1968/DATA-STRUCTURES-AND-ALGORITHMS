@@ -1,0 +1,18 @@
+int arrayRotateCheck(int *input, int size)
+{
+    int min= input[0],min_index,i;
+    if(input[i]==0){
+        return 0;
+    }
+    else{
+    for( i=0;i<size;i++){
+        if(min>input[i]){
+            min=input[i];
+            min_index=i;
+        
+        }
+    }
+        return min_index;
+    }
+    //Write your code here
+}

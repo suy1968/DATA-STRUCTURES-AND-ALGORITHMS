@@ -1,0 +1,14 @@
+#include<bits/stdc++.h>
+bool isPermutation(char input1[], char input2[]) {
+    // Write your code here
+    int n=strlen(input1);
+    int m=strlen(input2);
+    if(n!=m)
+        return false;
+    sort(input1,input1+n);
+    sort(input2,input2+m);
+    for(int i=0;i<n;i++)
+        if(input1[i]!=input2[i] )
+            return false;
+    return true;
+}
